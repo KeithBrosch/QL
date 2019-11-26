@@ -1,0 +1,116 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{overflow: hidden;}
+
+html, body { height: 100%; }
+
+body { margin: 0; font-family: "quatro-slab","times new roman",serif; background: whitesmoke }
+
+.mat-card{
+  background: whitesmoke;
+}
+
+/* Top Bar Styles */
+.top-bar {
+  background: #fff;
+  width: 100vw;
+}
+
+.top-bar img {
+  width: 150px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.top-bar img:focus {
+  outline: none;
+}
+
+@media only screen and (min-width: 800px) {
+  .top-bar img {
+    width: 200px;
+  }
+}
+
+/* End Top Bar Styles */
+
+/* Header Bar Styles */
+
+.header-bar {
+  background: #b5121b;
+  width: 100vw;
+}
+
+.header-bar p {
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.header-bar .hide-mobile{
+  display: none;
+}
+
+
+.header-bar .show-mobile {
+  display: flex;
+}
+
+@media only screen and (min-width: 800px) {
+
+  .header-bar .hide-mobile {
+    display: flex;
+  }
+
+  .header-bar .show-mobile {
+    display: none;
+  }
+}
+
+/* End Header Bar Styles */
+
+/* Grid List Style */
+
+.grid-list-container{
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.grid-list-container h1{
+  font-weight:600;
+  font-size: 24px;
+  color: red;
+}
+
+@media only screen and (min-width: 800px) {
+  .grid-list-container {
+    font-size: 20px;
+    width: 80% !important;
+    margin-top: 100px;
+  }
+}
+
+.mat-grid-tile{
+  cursor: pointer;
+}
+
+.mat-grid-tile:hover{
+  opacity: 1 !important;
+}
+
+.mat-grid-tile a{
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+  .mat-grid-tile a p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+    /* End Grid List Style */
