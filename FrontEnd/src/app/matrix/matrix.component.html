@@ -1,118 +1,34 @@
 <div class="matrix-content">
-  <mat-accordion class="example-headers-align">
-    <!-- Roof Repair Panel -->
-    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-description>
-          Roof Repair
-          <mat-icon>menu_icon</mat-icon>
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <b>Tarping or patchwork:</b> Up to $400 for 10x20 sq ft area
-      <mat-action-row>
-        <button mat-button color="primary" (click)="nextStep()">Next</button>
-      </mat-action-row>
-    </mat-expansion-panel>
+  
+  <mat-card @slideInLeft>
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
 
-    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-description>
-          Type the country name
-          <mat-icon>menu_icon</mat-icon>
-        </mat-panel-description>
-      </mat-expansion-panel-header>
+    <table mat-table [dataSource]="dataSource" >
 
-      buh
+      <!-- Position Column -->
+      <ng-container matColumnDef="Property Preservation Type">
+        <th mat-header-cell *matHeaderCellDef> Property Preservation Type </th>
+        <td mat-cell *matCellDef="let element"> {{element.propertyPreservationType}} </td>
+      </ng-container>
 
-      <mat-action-row>
-        <button mat-button color="warn" (click)="prevStep()">Previous</button>
-        <button mat-button color="primary" (click)="nextStep()">Next</button>
-      </mat-action-row>
-    </mat-expansion-panel>
+      <!-- Name Column -->
+      <ng-container matColumnDef="Fee Name">
+        <th mat-header-cell *matHeaderCellDef> Fee Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
 
-    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-description>
-          Type the country name
-          <mat-icon>menu_icon</mat-icon>
-        </mat-panel-description>
-      </mat-expansion-panel-header>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="Comments">
+        <th mat-header-cell *matHeaderCellDef> Comments </th>
+        <td mat-cell *matCellDef="let element"> {{element.comments}} </td>
+      </ng-container>
 
-      <mat-action-row>
-        <button mat-button color="warn" (click)="prevStep()">Previous</button>
-        <button mat-button color="primary" (click)="nextStep()">Next</button>
-      </mat-action-row>
-    </mat-expansion-panel>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
 
-    <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-description>
-          Type the country name
-          <mat-icon>menu_icon</mat-icon>
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-
-      <mat-action-row>
-        <button mat-button color="warn" (click)="prevStep()">Previous</button>
-        <button mat-button color="primary" (click)="nextStep()">Next</button>
-      </mat-action-row>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel [expanded]="step === 4" (opened)="setStep(4)" hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-description>
-          Type the country name
-          <mat-icon>menu_icon</mat-icon>
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-
-      <mat-action-row>
-        <button mat-button color="warn" (click)="prevStep()">Previous</button>
-        <button mat-button color="primary" (click)="nextStep()">Next</button>
-      </mat-action-row>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel [expanded]="step === 5" (opened)="setStep(5)" hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-description>
-          Type the country name
-          <mat-icon>menu_icon</mat-icon>
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-
-      <mat-action-row>
-        <button mat-button color="warn" (click)="prevStep()">Previous</button>
-        <button mat-button color="primary" (click)="nextStep()">Next</button>
-      </mat-action-row>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel [expanded]="step === 6" (opened)="setStep(6)" hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-description>
-          Type the country name
-          <mat-icon>menu_icon</mat-icon>
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-
-      <mat-action-row>
-        <button mat-button color="warn" (click)="prevStep()">Previous</button>
-        <button mat-button color="primary" (click)="nextStep()">Next</button>
-      </mat-action-row>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel [expanded]="step === 7" (opened)="setStep(7)" hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-description>
-          Inform the date you wish to travel
-          <mat-icon>menu_icon</mat-icon>
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-
-      <mat-action-row>
-        <button mat-button color="warn" (click)="prevStep()">Previous</button>
-        <button mat-button color="primary" (click)="nextStep()">End</button>
-      </mat-action-row>
-    </mat-expansion-panel>
-
-  </mat-accordion>
+    <mat-paginator [pageSizeOptions]="[5]"></mat-paginator>
+  </mat-card>
 </div>

@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material';
+import { MatPaginatorModule } from '@angular/material';
 
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { MatrixHeaderComponent } from './matrix-header/matrix-header.component';
@@ -19,7 +21,6 @@ import { CategoryComponent } from './category/category.component';
 import { MatrixComponent } from './matrix/matrix.component';
 import { GridListHeaderComponent } from './grid-list-header/grid-list-header.component';
 import { FooterComponent } from './footer/footer.component';
-import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -37,11 +38,13 @@ import { MatIconModule } from '@angular/material/icon';
       BrowserAnimationsModule,
       MatToolbarModule,
       MatGridListModule,
-      MatExpansionModule,
       MatCardModule,
       MatButtonModule,
       MatTableModule,
       MatIconModule,
+      MatFormFieldModule,
+      MatInputModule,
+      MatPaginatorModule,
       RouterModule.forRoot([
           { path: '', component: MatrixHeaderComponent },
           { path: 'reference-guide', component: GridListHeaderComponent },

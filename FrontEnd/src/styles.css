@@ -157,6 +157,7 @@ body { margin: 0; font-family: "quatro-slab","times new roman",serif; background
 
 .footer-bar{
   position: absolute;
+  height: 30px !important;
   bottom: 0;
   background: #fff;
 }
@@ -181,13 +182,77 @@ body { margin: 0; font-family: "quatro-slab","times new roman",serif; background
 /* Matrix Styles*/
 
 .matrix-content {
-  width: 80%;
+  width: 90%;
   margin: auto;
-  margin-top: 50px !important;
+  color: #b5121b;
 }
 
-.example-headers-align .mat-expansion-panel-header-title,
-.example-headers-align .mat-expansion-panel-header-description {
+.mat-tab-label {
+  color: #b5121b;
+}
+
+.matrix-content .mat-card {
+  margin-top: 50px;
+  height: calc(80vh - 50px) !important;
+  background: #fff;
+  border-radius: 0px;
+  padding: 0;
+  color: #b5121b !important;
+}
+
+.matrix-content .mat-card .mat-form-field {
+  font-size: 16px;
+}
+
+.mat-form-field-label {
+  color: #b5121b !important;
+}
+
+.mat-form-field-underline {
+  background-color: #b5121b !important;
+}
+
+.mat-form-field-ripple {
+  background-color: #b5121b !important;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+}
+
+
+.matrix-content .mat-card table {
+  width: 100%;
+  background: #b5121b;
+  border: 2px solid #b5121b;
+  opacity: 0.8;
+  overflow-y: scroll;
+}
+
+.matrix-content .mat-paginator {
+  background: #b5121b;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.matrix-content th{
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.mat-select-panel {
+  background: #b5121b;
+  opacity: 0.8;
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
+  color: #fff;
+}
+
+.matrix-content .mat-card table td, .matrix-content .mat-card table th {
+  color: #fff !important;
+}
+    .example-headers-align .mat-expansion-panel-header-title, .example-headers-align .mat-expansion-panel-header-description {
   flex-basis: 0;
 }
 
