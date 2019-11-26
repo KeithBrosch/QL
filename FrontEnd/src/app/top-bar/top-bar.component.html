@@ -1,1 +1,11 @@
-<mat-toolbar class="top-bar"><img @fadeIn [routerLink]="['']" src="../assets/images/QuickenLoans-Logo-Horiz.png" /></mat-toolbar>
+<mat-toolbar class="top-bar">
+  <img @fadeIn [routerLink]="['']" src="../assets/images/QuickenLoans-Logo-Horiz.png" />
+  <span class="top-bar-buttons hide-mobile">
+    <a @slideInDown [routerLink]="['/']"><button mat-raised-button>Matrix</button></a>
+    <a @slideInDownSlowest [routerLink]="['/reference-guide']"><button mat-raised-button>Reference Guide</button></a>
+    <a @slideInDownSlower target="_blank" href="../../assets/ppmatrix.pdf"><button mat-raised-button>Download PDF</button></a>
+  </span>
+  <span class="top-bar-buttons top-bar-buttons-mobile show-mobile">
+    <a @slideInDownSlower target="_blank" href="../../assets/ppmatrix.pdf"><button mat-raised-button>Download PDF</button></a>
+  </span>
+</mat-toolbar>

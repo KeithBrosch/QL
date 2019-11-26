@@ -1,19 +1,18 @@
 <div class="grid-list-container">
-  <h4 @slideUp>Fannie Mae Property Preservation Matrix (allowable amount is per occurrence)</h4>
   <mat-grid-list cols="4" rowHeight="100px">
     <mat-grid-tile @slideInLeft *ngFor="let tile of tiles"
                    [colspan]="tile.cols"
                    [rowspan]="tile.rows"
                    [style.background]="tile.color"
                    [style.opacity]="tile.opacity">
-      <a [routerLink]="['category', tile.url]"><p>{{tile.text}}</p></a>
+      <a [routerLink]="[tile.url]" ><p>{{tile.text}}</p></a>
     </mat-grid-tile>
     <mat-grid-tile @slideInRight *ngFor="let tile of tiles2"
                    [colspan]="tile.cols"
                    [rowspan]="tile.rows"
                    [style.background]="tile.color"
                    [style.opacity]="tile.opacity">
-      <a [routerLink]="['category', tile.url]"><p>{{tile.text}}</p></a>
+      <a [routerLink]="[tile.url]"><p>{{tile.text}}</p></a>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
