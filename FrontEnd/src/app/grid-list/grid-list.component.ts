@@ -95,7 +95,7 @@ export class GridListComponent implements OnInit {
             color: '#0c4569',
             opacity: 0.6,
             text: 'Swimming Pool',
-            url: "Swimming Pools",
+            url: "Swimming-Pool",
         },
         {
             cols: 3,

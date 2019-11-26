@@ -17,7 +17,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class GridListHeaderComponent implements OnInit {
 
-    title = "Fannie Mae | Reference Guide";
+    title = "Fannie Mae | Property Preservation and Management Reference Guide";
 
   constructor() { }
 

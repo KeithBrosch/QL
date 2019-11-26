@@ -279,3 +279,15 @@ mat-form-field {
 }
 
 /* End Matrix Styles*/
+
+/* Category Styles*/
+
+.category-container{
+  padding: 0 50px;
+}
+
+.category-container h1, .category-container p{
+  color: #000;
+}
+
+/* End Category Styles*/
