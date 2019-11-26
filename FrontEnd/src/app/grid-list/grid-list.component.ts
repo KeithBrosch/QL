@@ -17,17 +17,23 @@ export interface Tile {
     animations: [
         trigger('slideInLeft', [
             transition(':enter', [
-                style({ transform: 'translateX(100%)'}),
-                animate('700ms ease-in', style({ transform: 'translateX(0%)'}))
+                style({ transform: 'translateX(100%) translateY(-100%)', }),
+                animate('700ms ease-in', style({ transform: 'translateX(0%) translateY(0%)'}))
             ])
         ]),
         trigger('slideInRight', [
             transition(':enter', [
-                style({ transform: 'translateX(-100%)'}),
-                animate('700ms ease-in', style({ transform: 'translateX(0%)'}))
+                style({ transform: 'translateX(-100%) translateY(100%)'}),
+                animate('700ms ease-in', style({ transform: 'translateX(0%) translateY(0%)'}))
             ])
         ]),
-    ]
+            trigger('slideUp', [
+                transition(':enter', [
+                    style({ transform: 'translateX(100%)', opacity: 0 }),
+                    animate('800ms ease-in', style({ transform: 'translateX(0%)', opacity: 1 }))
+                ])
+            ])
+        ]
 })
 export class GridListComponent implements OnInit {
 

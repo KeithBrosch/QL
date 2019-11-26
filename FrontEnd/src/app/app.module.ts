@@ -9,7 +9,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 
-
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { HeaderComponent } from './header/header.component';
 import { GridListComponent } from './grid-list/grid-list.component';
